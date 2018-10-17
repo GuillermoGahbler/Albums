@@ -4,19 +4,25 @@ import axios from 'axios';
 
 
 class AlbumList extends Component {
-  //this state = is to initialize not update, if update use this.setState
-  state = { albums: [] };
+     state = { albums: [] };
   
   componentWillMount () {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums')
     .then(response => this.setState({ albums: response.data }));
   }
   
+  renderAlbums () {
+    return this.state.albums.map(album => 
+    <Text key={album.title}>{album.title}</Text>);
+  }
+
   render() {
+        
     console.log(this.state);
+    
     return (
       <View>
-        <Text>this is the Albums List!</Text>
+        {this.renderAlbums()}
       </View>
     );
   }

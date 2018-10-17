@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 
 const CardSection = (props) => {
 
@@ -10,7 +10,7 @@ const CardSection = (props) => {
 };
 
 const styles = {
-  containerStyle:{
+  containerStyle: {
     borderBottomWidth: 1,
     padding: 5,
     backgroundColor: '#fff',

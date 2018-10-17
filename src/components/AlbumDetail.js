@@ -8,9 +8,10 @@ const AlbumDetail = (props) =>{
   return (
     <Card>
       <CardSection>
-      <Text>{props.album.title}</Text>
+       <Text>{props.album.title}</Text>
       </CardSection>
-    </Card>
+
+     </Card>
   )
 }
 
